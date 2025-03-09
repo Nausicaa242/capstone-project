@@ -1,38 +1,93 @@
-.App {
+#root {
+  /* display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: minmax(150px, auto); */
+
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
   text-align: center;
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav ul li {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  grid-template-columns: auto;
+  padding: 10px 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
+  background-color: #495E57;
+  padding: 2em;
+  place-content: center;
+  place-items: center;
+}
+
+main .container {
+  display: grid;
+  grid-template-columns: 1fr fit-content(40%);
+  max-width: 960px;
+  gap: 2em;
+}
+
+.main-text {
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-text button {
+  margin-top: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer {
+  background-color: #495E57;
+  text-align: center;
+  padding: 2em;
+  place-items: center;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);  
+}
+
+.footer-column-links {
+  text-align: left;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo {
+  height: 40px;
+  padding: 1em;
+}
+
+.restaurant-food {
+  width: 375px;
+  height: 424px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
