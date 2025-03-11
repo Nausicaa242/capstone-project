@@ -4,7 +4,7 @@ function Footer() {
     return (
         <footer>
             <div className="container">
-                <img className="" src="/images/footer-logo.jpg" alt="Little Lemon Logo" />
+                <img className="footer-logo" src="/images/footer-logo.jpg" alt="Little Lemon Logo" />
                 <div className="footer-column-links">
                     <h2>Doormat Navigation</h2>
                     <ul>
