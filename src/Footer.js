@@ -1,19 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
         <footer>
             <div className="container">
-                <img className="footer-logo" src="/images/footer-logo.jpg" alt="Little Lemon Logo" />
+                <div className="footer-column-links">
+                    <Link to="/">
+                        <img className="footer-logo" src="/images/footer-logo.jpg" alt="Little Lemon Logo" />
+                    </Link>
+                </div>
                 <div className="footer-column-links">
                     <h2>Doormat Navigation</h2>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/">About</a></li>
-                        <li><a href="/">Menu</a></li>
-                        <li><a href="/">Reservations</a></li>
-                        <li><a href="/">Order Online</a></li>
-                        <li><a href="/">Login</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/menu">Menu</Link></li>
+                        <li><Link to="/reservations">Reservations</Link></li>
+                        <li><Link to="/order-online">Order Online</Link></li>
+                        <li><Link to="/login">Login</Link></li>
                     </ul>
                 </div>
                 <div className="footer-column-links">
@@ -27,9 +32,9 @@ function Footer() {
                 <div className="footer-column-links">
                     <h2>Social Media Links</h2>
                     <ul>
-                        <li><a href="/">Facebook</a></li>
-                        <li><a href="/">Instagram</a></li>
-                        <li><a href="/">TikTok</a></li>
+                        <li><a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a></li>
+                        <li><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a></li>
+                        <li><a href="https://tiktok.com" target="_blank" rel="noreferrer">TikTok</a></li>
                     </ul>
                 </div>
             </div>
