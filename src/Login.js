@@ -2,13 +2,11 @@ import React from 'react';
 
 function Login() {
     return (
-        <main>
+        <section className="login">
             <div className="container">
-                <div className="main-text">
-                    <h1>Login</h1>
-                </div>
+                <h1>Login</h1>
             </div>
-        </main>
+        </section>
     );
 }
 

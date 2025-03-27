@@ -2,13 +2,11 @@ import React from 'react';
 
 function About() {
   return (
-    <main>
-        <div className="container">
-            <div className="main-text">
-              <h1>About</h1>
-            </div>
-        </div>
-    </main>
+    <section className="container">
+      <div className="main-text">
+        <h1>About</h1>
+      </div>
+    </section>
   );
 }
 

@@ -2,13 +2,11 @@ import React from 'react';
 
 function Menu() {
     return (
-        <main>
+        <section className="menu">
             <div className="container">
-                <div className="main-text">
-                    <h1>Menu</h1>
-                </div>
+                <h1>Menu</h1>
             </div>
-        </main>
+        </section>
     );
 }
 

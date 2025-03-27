@@ -2,13 +2,11 @@ import React from 'react';
 
 function OrderOnline() {
     return (
-        <main>
+        <section className="order-online">
             <div className="container">
-                <div className="main-text">
-                    <h1>Order Online</h1>
-                </div>
+                <h1>Order Online</h1>
             </div>
-        </main>
+        </section>
     );
 }
 

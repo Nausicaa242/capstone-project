@@ -2,13 +2,11 @@ import React from 'react';
 
 function Reservations() {
     return (
-        <main>
+        <section className="reservations">
             <div className="container">
-                <div className="main-text">
-                    <h1>Reservations</h1>
-                </div>
+                <h1>Reservations</h1>
             </div>
-        </main>
+        </section>
     );
 }
 
