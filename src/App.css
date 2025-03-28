@@ -615,6 +615,13 @@ footer .container {
   color: var(--brand-highlight-1-color);
 }
 
+.booking-form fieldset {
+  border: none;
+  padding: 0;
+  display: inline-grid;
+  gap: .5em;
+}
+
 .booking-form button {
   border: none;
 }
