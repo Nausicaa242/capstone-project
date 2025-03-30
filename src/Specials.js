@@ -30,7 +30,7 @@ function Special({ image, specialName, price, description }) {
                 <h3>{specialName}</h3>
                 <p className="price">{price}</p>
                 <p className="description">{description}</p>
-                <p className="delivery">Order a delivery<span><img src="/images/scooter.png" alt="Delivery" /></span></p>
+                <Link className="delivery" to="/order-online">Order a delivery<span><img src="/images/scooter.png" alt="Delivery" /></span></Link>
             </div>
         </div>
     );
@@ -42,7 +42,7 @@ function Specials() {
             <div className="container">
                 <div className="specials-header">
                     <h2>Specials</h2>
-                    <Link className="button" to="/">Online Menu</Link>
+                    <Link className="button" to="/menu">Online Menu</Link>
                 </div>
                 <div className="specials-grid">
                     {specialsData.map((special, index) => (

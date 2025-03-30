@@ -1,21 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function BookingForm({ availableTimes = [], dispatch }) {
-    const [date, setDate] = useState('');
-    const [time, setTime] = useState('17.00');
+function BookingForm({ today, availableTimes = [], dispatch }) {
+    const navigate = useNavigate();
+    const [date, setDate] = useState(today);
+    const [time, setTime] = useState('');
     const [guests, setGuests] = useState('1');
     const [occasion, setOccasion] = useState('none');
+
+    useEffect(() => {
+        dispatch({ type: 'SELECT_DATE', date: today }); // Fetch available times for today's date on initial render
+    }, [dispatch, today]);
 
     const handleDateChange = (e) => {
         const selectedDate = e.target.value;
         setDate(selectedDate);
         dispatch({ type: 'SELECT_DATE', date: selectedDate });
-    }
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(`Date: ${date}, Time: ${time}, Guests: ${guests}, Occasion: ${occasion}`);
-    }
+        navigate('/booking-confirmed'); // Navigate to the booking confirmation page
+    };
 
     return (
         <form className="booking-form" role="form" onSubmit={handleSubmit}>
@@ -37,9 +44,9 @@ function BookingForm({ availableTimes = [], dispatch }) {
                     value={time}
                     onChange={(e) => setTime(e.target.value)}
                 >
-                    {availableTimes.map((availableTimes) => (
-                        <option key={availableTimes} value={availableTimes}>
-                            {availableTimes}
+                    {availableTimes.map((availableTime) => (
+                        <option key={availableTime} value={availableTime}>
+                            {availableTime}
                         </option>
                     ))}
                 </select>

@@ -314,9 +314,11 @@ main {
 
 .special-details .delivery {
   color: var(--brand-highlight-2-color);
+  font: var(--p-font);
   font-weight: 700;
   grid-column: 1 / -1;
   grid-row: 3;
+  text-decoration: none;
 }
 
 .special-details .delivery span {
@@ -624,4 +626,8 @@ footer .container {
 
 .booking-form button {
   border: none;
+}
+
+.booking-confirmation .lead {
+  line-height: 1;
 }
