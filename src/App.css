@@ -9,7 +9,7 @@
   --h2-font: normal 400 64px 'Markazi Text';
   --h2-subtitle-font: normal 400 48px /.5 'Markazi Text';
   --h3-font: normal 400 24px 'Markazi Text';
-  --nav-font: normal 700 18px 'Karla';  
+  --nav-font: normal 700 18px 'Karla';
   --p-font: normal 400 16px/1.5 'Karla';
   --p-lead-font: normal 500 18px 'Karla';
   --p-highlight-font: normal 500 16px 'Karla';
@@ -164,32 +164,58 @@ main {
   background-color: var(--brand-primary-1-color);
 }
 
-.cta .container {
+.cta .container,
+.booking-page .container,
+.booking-confirmation .container {
   grid-template-columns: 1fr auto;
+  margin-bottom: -60px;
+}
+
+@media (max-width: 992px) {
+  .cta .container,
+  .booking-page .container,
+  .booking-confirmation .container {
+    margin-bottom: -40px;
+  }
 }
 
 @media (max-width: 767px) {
-  .cta .container {
+  .cta .container,
+  .booking-page .container,
+  .booking-confirmation .container {
     grid-template-columns: 1fr;
   }
 }
 
-.cta-text {
+.cta-text{
   padding-top: 1.25em;
   display: flex;
   flex-direction: column;
 }
 
 .cta-text .button {
-  margin-top: 80px;
+  margin-top: 60px;
   width: fit-content;
 }
 
+.cta-image .image,
+.booking-image .image,
+.booking-confirmation-image .image {
+  width: 375px;
+  height: 424px;
+  object-fit: cover;
+  border-radius: var(--border-radius-size);
+}
+
 @media (max-width: 767px) {
-  .cta-image {
+  .cta-image,
+  .booking-image,
+  .booking-confirmation-image {
     text-align: center;
   }
-  .restaurant-food {
+  .cta-image .image,
+  .booking-image .image,
+  .booking-confirmation-image .image{
     max-width: 100%;
     height: 424px;
     object-fit: cover;
@@ -200,24 +226,100 @@ main {
   }
 }
 
-.restaurant-food {
-  width: 375px;
-  height: 424px;
-  object-fit: cover;
+.booking-text,
+.booking-confirmation-text {
+  padding-top: 1.25em;
+}
+
+.booking-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 10px;
+  margin-bottom: 85px;
+}
+
+@media (max-width: 767px) {
+  .booking-form {
+    grid-template-columns: 1fr;
+    margin-bottom: 20px;
+  }
+}
+
+.booking-form input,
+.booking-form select {
+  padding: 10px;
   border-radius: var(--border-radius-size);
+  border: none;
+  font: var(--p-font);
+  color: var(--brand-highlight-2-color);
+}
+
+.booking-form .lead {
+  font: var(--p-lead-font);
+  color: var(--brand-highlight-1-color);
+}
+
+.booking-form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: .45em;
+  align-items: start;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.booking-form input,
+.booking-form select {
+  border: 2px solid transparent;
+}
+
+.booking-form input {
+  height: 21px;
+  max-height: 21px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form .error {
+  align-self: stretch;
+}
+
+input:focus-visible,
+select:focus-visible {
+  outline-color: var(--brand-highlight-2-color);
+}
+
+.booking-form .error {
+  color: var(--brand-secondary-1-color);
+  font: var(--p-font);
+  font-weight: 700;
+}
+
+.booking-form button {
+  border: none;
+  grid-column: 1 / -1;
+  margin-top: 10px;
+}
+
+.booking-confirmation .lead {
+  line-height: 1;
+}
+
+.booking-form .error-border {
+  border: 2px solid var(--brand-secondary-1-color); /* Red border for error */
 }
 
 .specials {
   background-color: var(--white-color);
-  margin-top: -60px;
   padding-top: 60px;
   padding-bottom: 5em;
 }
 
 @media (max-width: 992px) {
   .specials {
-    margin-top: -30px;
-    padding-top: 30px;
+    padding-top: 40px;
   }
 }
 
@@ -241,6 +343,7 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 35px;
+  margin-top: 1.25em;
 }
 
 @media (max-width: 767px) {
@@ -595,39 +698,4 @@ footer .container {
 .footer-column-links ul a {
   text-decoration: none;
   color: var(--brand-highlight-1-color);
-}
-
-.booking-form {
-  display: grid;
-  max-width: 200px;
-  gap: 20px;
-}
-
-.booking-form input,
-.booking-form select {
-  padding: 10px;
-  border-radius: var(--border-radius-size);
-  border: none;
-  font: var(--p-font);
-  color: var(--brand-highlight-2-color);
-}
-
-.booking-form .lead {
-  font: var(--p-lead-font);
-  color: var(--brand-highlight-1-color);
-}
-
-.booking-form fieldset {
-  border: none;
-  padding: 0;
-  display: inline-grid;
-  gap: .5em;
-}
-
-.booking-form button {
-  border: none;
-}
-
-.booking-confirmation .lead {
-  line-height: 1;
 }

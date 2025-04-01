@@ -4,8 +4,8 @@ const testimonialsData = [
     {
         stars: 5,
         image: "images/judith.jpg",
-        name: "Sara Lopez",
-        nickname: "Sara72",
+        name: "Judith Smith",
+        nickname: "JudyBoots72",
         comment: "Seriously cannot stop thinking about the Turkish Mac n' Cheese!!"
     },
     {
@@ -25,8 +25,8 @@ const testimonialsData = [
     {
         stars: 5,
         image: "images/imansyah.jpg",
-        name: "Sara Lopez",
-        nickname: "Sara72",
+        name: "Imansyah Sukma",
+        nickname: "Iman_the_man",
         comment: "Such a chilled-out atmosphere - love it!"
     }
 ];
